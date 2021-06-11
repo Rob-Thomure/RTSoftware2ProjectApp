@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="310.0" prefWidth="320"  xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReportTotalAppointmentsByConsultantController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="310.0" prefWidth="320.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="50.0" prefWidth="100.0">
+               <children>
+                  <Label text="Total appintments by Consultant">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <TableView fx:id="reportTable" maxWidth="-Infinity" prefHeight="195.0" prefWidth="250.0">
+              <columns>
+                <TableColumn fx:id="consultantCol" prefWidth="120.0" text="Consultant" />
+                <TableColumn fx:id="numberOfAppointmentsCol" prefWidth="129.0" text="# of Appointments" />
+              </columns>
+            </TableView>
+            <VBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="100.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#onActionBack" text="Back" />
+               </children>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
